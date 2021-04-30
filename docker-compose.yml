@@ -1,0 +1,28 @@
+version: '3'
+services:
+    # go api server
+    api:
+        build:
+            context: ./api
+            dockerfile: Dockerfile
+        container_name: api-server
+        ports: 
+            - 8000:8000
+        restart: always
+        command: sleep infinity
+        # tty: true
+        volumes: 
+            - ./api:/go/src
+    # mysql db server
+    # db:
+    #     image: mysql:latest
+    #     container_name: db-server
+    #     ports:
+    #         - "3306:3306"
+    #     environment:
+    #         MYSQL_USER: root
+    #         MYSQL_ROOT_PASSWORD: password
+    #         MYSQL_DATABASE: password
+    #     volumes:
+    #         - "./db/my.conf:/etc/mysql/my.conf"
+    #     command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci --skip-character-set-client-handshake

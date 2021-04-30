@@ -1,0 +1,16 @@
+{
+    "name": "task_management",
+    "dockerComposeFile": [
+        "../docker-compose.yml"
+    ],
+    "workspaceFolder": "/go/src/",
+    "service": "api",
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "editor.tabSize": 4,
+        "go.useLanguageServer": true
+    },
+    "extensions": [
+        "golang.go"
+    ]
+}
